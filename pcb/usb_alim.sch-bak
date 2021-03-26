@@ -20,9 +20,9 @@ F0 "buck-boost-2" 50
 F1 "buck-boost-TPS55288.sch" 50
 $EndSheet
 $Sheet
-S 6300 3600 950  400 
-U 6064BAB6
-F0 "buck-boost" 50
-F1 "buck-boost-LM5176.sch" 50
+S 5900 3450 900  350 
+U 605E3BAB
+F0 "mcu" 50
+F1 "mcu-STM32F446RE.sch" 50
 $EndSheet
 $EndSCHEMATC
