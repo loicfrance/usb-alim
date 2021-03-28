@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP L7985
+F https://docs.rs-online.com/d53f/0900766b812f91ea.pdf
+$ENDCMP
+#
 $CMP STUSB1602
 F https://docs.rs-online.com/f384/A700000006389067.pdf
 $ENDCMP

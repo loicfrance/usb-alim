@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -482,9 +482,33 @@ Wire Wire Line
 Wire Wire Line
 	5700 2250 5800 2250
 Connection ~ 6000 2250
+$Comp
+L power:VBUS #PWR0126
+U 1 1 60672ADC
+P 7450 1250
+F 0 "#PWR0126" H 7450 1100 50  0001 C CNN
+F 1 "VBUS" V 7465 1377 50  0000 L CNN
+F 2 "" H 7450 1250 50  0001 C CNN
+F 3 "" H 7450 1250 50  0001 C CNN
+	1    7450 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 1250 7450 1250
 Connection ~ 7500 1250
 Wire Wire Line
 	5200 2250 5200 2300
+$Comp
+L power:VBUS #PWR0127
+U 1 1 606834F7
+P 6700 2250
+F 0 "#PWR0127" H 6700 2100 50  0001 C CNN
+F 1 "VBUS" V 6715 2378 50  0000 L CNN
+F 2 "" H 6700 2250 50  0001 C CNN
+F 3 "" H 6700 2250 50  0001 C CNN
+	1    6700 2250
+	0    1    1    0   
+$EndComp
 NoConn ~ 6100 2950
 Wire Wire Line
 	6000 2850 6000 2950
@@ -792,13 +816,17 @@ Wire Wire Line
 Connection ~ 9700 1400
 Wire Wire Line
 	9700 1400 9700 1700
-Text HLabel 6900 2250 2    50   Output ~ 0
+Text HLabel 6700 2400 2    50   Output ~ 0
 VBUS
 Wire Wire Line
-	6500 2250 6700 2250
+	6500 2250 6600 2250
 Wire Wire Line
-	6700 2250 6900 2250
-Connection ~ 6700 2250
+	6600 2250 6600 2400
+Wire Wire Line
+	6600 2400 6700 2400
+Connection ~ 6600 2250
+Wire Wire Line
+	6600 2250 6700 2250
 Wire Wire Line
 	4900 3550 5300 3550
 Wire Wire Line
@@ -870,8 +898,4 @@ Wire Wire Line
 Wire Wire Line
 	5250 3050 5000 3050
 Connection ~ 5000 3050
-Wire Wire Line
-	6700 2250 6700 1250
-Wire Wire Line
-	6700 1250 7500 1250
 $EndSCHEMATC
