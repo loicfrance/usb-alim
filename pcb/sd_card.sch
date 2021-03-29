@@ -18,10 +18,10 @@ L Connector:Micro_SD_Card_Det J?
 U 1 1 61166122
 P 5450 2750
 AR Path="/61166122" Ref="J?"  Part="1" 
-AR Path="/61165BBE/61166122" Ref="J?"  Part="1" 
-F 0 "J?" V 5446 2070 50  0000 R CNN
+AR Path="/61165BBE/61166122" Ref="J501"  Part="1" 
+F 0 "J501" V 5446 2070 50  0000 R CNN
 F 1 "Micro_SD_Card_Det" V 5355 2070 50  0000 R CNN
-F 2 "" H 7500 3450 50  0001 C CNN
+F 2 "Connector_Card:microSD_HC_Molex_104031-0811" H 7500 3450 50  0001 C CNN
 F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 5450 2850 50  0001 C CNN
 	1    5450 2750
 	0    -1   -1   0   
@@ -31,8 +31,8 @@ L power:GND #PWR?
 U 1 1 61166128
 P 6000 1900
 AR Path="/61166128" Ref="#PWR?"  Part="1" 
-AR Path="/61165BBE/61166128" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6000 1650 50  0001 C CNN
+AR Path="/61165BBE/61166128" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 6000 1650 50  0001 C CNN
 F 1 "GND" V 6005 1772 50  0000 R CNN
 F 2 "" H 6000 1900 50  0001 C CNN
 F 3 "" H 6000 1900 50  0001 C CNN
@@ -44,10 +44,10 @@ Wire Wire Line
 Wire Wire Line
 	5950 1900 5950 1950
 $Comp
-L Device:R_Small R?
+L Device:R_Small R502
 U 1 1 611665BA
 P 6150 3750
-F 0 "R?" V 5954 3750 50  0000 C CNN
+F 0 "R502" V 5954 3750 50  0000 C CNN
 F 1 "100k" V 6045 3750 50  0000 C CNN
 F 2 "" H 6150 3750 50  0001 C CNN
 F 3 "~" H 6150 3750 50  0001 C CNN
@@ -59,10 +59,10 @@ Wire Wire Line
 Wire Wire Line
 	5950 3750 6050 3750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0126
 U 1 1 61166FB5
 P 6350 3850
-F 0 "#PWR?" H 6350 3600 50  0001 C CNN
+F 0 "#PWR0126" H 6350 3600 50  0001 C CNN
 F 1 "GND" V 6355 3722 50  0000 R CNN
 F 2 "" H 6350 3850 50  0001 C CNN
 F 3 "" H 6350 3850 50  0001 C CNN
@@ -114,10 +114,10 @@ Wire Wire Line
 Text HLabel 6450 4650 2    50   Input ~ 0
 VSS
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0127
 U 1 1 61168948
 P 6450 4650
-F 0 "#PWR?" H 6450 4400 50  0001 C CNN
+F 0 "#PWR0127" H 6450 4400 50  0001 C CNN
 F 1 "GND" V 6455 4522 50  0000 R CNN
 F 2 "" H 6450 4650 50  0001 C CNN
 F 3 "" H 6450 4650 50  0001 C CNN
@@ -148,10 +148,10 @@ Wire Wire Line
 Text HLabel 6450 4500 2    50   Input ~ 0
 3.3V
 $Comp
-L Device:R_Small R?
+L Device:R_Small R501
 U 1 1 61170FC5
 P 5050 4500
-F 0 "R?" V 5150 4650 50  0000 C CNN
+F 0 "R501" V 5150 4650 50  0000 C CNN
 F 1 "100k" V 5150 4500 50  0000 C CNN
 F 2 "" H 5050 4500 50  0001 C CNN
 F 3 "~" H 5050 4500 50  0001 C CNN
@@ -167,7 +167,7 @@ Wire Wire Line
 	4850 4400 5250 4400
 Wire Wire Line
 	5150 4500 5350 4500
+Connection ~ 5350 4500
 Wire Bus Line
 	4350 4100 5650 4100
-Connection ~ 5350 4500
 $EndSCHEMATC
