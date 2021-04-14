@@ -386,34 +386,18 @@ Wire Wire Line
 Wire Wire Line
 	6000 2650 6000 2600
 Wire Wire Line
-	6000 2600 5500 2600
-Wire Wire Line
 	5500 2600 5500 2550
 Wire Wire Line
-	6000 2600 6300 2600
+	6000 2600 6050 2600
 Wire Wire Line
 	6300 2600 6300 2550
 Connection ~ 6000 2600
-Wire Wire Line
-	6000 2550 6000 2600
-Wire Wire Line
-	6000 2250 6100 2250
-Wire Wire Line
-	6000 2250 6000 2350
-Wire Wire Line
-	5700 2250 5800 2250
-Connection ~ 6000 2250
 Connection ~ 7500 1250
 Wire Wire Line
 	5200 2250 5200 2300
 NoConn ~ 6100 2950
 Wire Wire Line
 	6000 2850 6000 2950
-Connection ~ 5800 2250
-Wire Wire Line
-	5800 2250 6000 2250
-Wire Wire Line
-	5800 2250 5800 2950
 $Comp
 L pspice:MPMOS M401
 U 1 1 60698F30
@@ -632,9 +616,11 @@ Wire Wire Line
 Wire Wire Line
 	4900 3250 4900 3550
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J401
+L usb_alim-rescue:USB_C_Receptacle_USB2.0-Connector J401
 U 1 1 607E779C
 P 3550 3650
+AR Path="/607E779C" Ref="J401"  Part="1" 
+AR Path="/6071A9E5/607E779C" Ref="J401"  Part="1" 
 F 0 "J401" H 3657 4517 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 3657 4426 50  0000 C CNN
 F 2 "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 3700 3650 50  0001 C CNN
@@ -824,12 +810,12 @@ $EndComp
 $Comp
 L Device:R_Small R?
 U 1 1 60680349
-P 6000 2450
-F 0 "R?" V 5950 2450 39  0000 C BNN
-F 1 "10k" V 6050 2450 39  0000 C TNN
-F 2 "" H 6000 2450 50  0001 C CNN
-F 3 "~" H 6000 2450 50  0001 C CNN
-	1    6000 2450
+P 6050 2450
+F 0 "R?" V 6000 2450 39  0000 C BNN
+F 1 "10k" V 6100 2450 39  0000 C TNN
+F 2 "" H 6050 2450 50  0001 C CNN
+F 3 "~" H 6050 2450 50  0001 C CNN
+	1    6050 2450
 	1    0    0    1   
 $EndComp
 $Comp
@@ -868,7 +854,7 @@ Connection ~ 6900 4650
 Wire Wire Line
 	6900 4650 7150 4650
 Wire Wire Line
-	6300 2950 6650 2950
+	6300 2950 6450 2950
 Wire Wire Line
 	6650 2950 6650 2600
 Wire Wire Line
@@ -884,4 +870,79 @@ Connection ~ 4200 3650
 Wire Wire Line
 	4200 3750 4250 3750
 Connection ~ 4200 3750
+$Comp
+L Device:C_Small C?
+U 1 1 6077C8BA
+P 6450 2850
+F 0 "C?" V 6350 2850 39  0000 C CNN
+F 1 "1u" V 6550 2850 39  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6450 2850 50  0001 C CNN
+F 3 "~" H 6450 2850 50  0001 C CNN
+	1    6450 2850
+	1    0    0    1   
+$EndComp
+Connection ~ 6450 2950
+Wire Wire Line
+	6450 2950 6650 2950
+$Comp
+L power:GND #PWR?
+U 1 1 6077CF57
+P 6450 2750
+F 0 "#PWR?" H 6450 2500 50  0001 C CNN
+F 1 "GND" H 6450 2650 39  0000 C TNN
+F 2 "" H 6450 2750 50  0001 C CNN
+F 3 "" H 6450 2750 50  0001 C CNN
+	1    6450 2750
+	-1   0    0    1   
+$EndComp
+Text Notes 8800 3500 0    50   ~ 0
+Pour SCLK ils mettent 2.2k dans le doc UM2191,\nà voir dans la datasheet
+Text Notes 6850 4800 0    50   ~ 0
+Dans le DOC ils mettent 10k,\ntrès honnetement je sais pas\nsi ça change grand chose\n
+Text Notes 4200 3500 0    50   ~ 0
+Il y a des jumpers dans UM2191,\nentre CCX et CCXDB,\ntu sais pourquoi ?
+$Comp
+L Device:C_Small C?
+U 1 1 60783CC0
+P 5800 2450
+F 0 "C?" V 5700 2450 39  0000 C CNN
+F 1 "1u" V 5900 2450 39  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5800 2450 50  0001 C CNN
+F 3 "~" H 5800 2450 50  0001 C CNN
+	1    5800 2450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5700 2250 5750 2250
+Wire Wire Line
+	5800 2950 5800 2800
+Wire Wire Line
+	5800 2800 5750 2800
+Wire Wire Line
+	5750 2800 5750 2250
+Connection ~ 5750 2250
+Wire Wire Line
+	5750 2250 5800 2250
+Wire Wire Line
+	5500 2600 5800 2600
+Wire Wire Line
+	5800 2550 5800 2600
+Connection ~ 5800 2600
+Wire Wire Line
+	5800 2600 6000 2600
+Wire Wire Line
+	5800 2350 5800 2250
+Connection ~ 5800 2250
+Wire Wire Line
+	5800 2250 6050 2250
+Wire Wire Line
+	6050 2550 6050 2600
+Connection ~ 6050 2600
+Wire Wire Line
+	6050 2600 6300 2600
+Wire Wire Line
+	6050 2350 6050 2250
+Connection ~ 6050 2250
+Wire Wire Line
+	6050 2250 6100 2250
 $EndSCHEMATC
